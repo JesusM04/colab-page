@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Lu.Store</title>
+  <meta name="description" content="Conoce sobre Lu.Store, nuestra misión y nuestra conexión con la cultura K-pop y anime.">
+  <script>
+    // Forzar tema oscuro y evitar parpadeo
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  </script>
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --text-color: #ffffff;
+      --primary-color: #ff4d8d;
+      --secondary-color: #ff8c42;
+      --accent-color: #ff4d8d;
+      --card-bg: #2d2d2d;
+      --border-color: #3d3d3d;
+      --hover-color: #ff6ba3;
+      --shadow-color: rgba(0, 0, 0, 0.3);
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  </style>
+  <link rel="icon" type="image/png" href="assets/images/logo1.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button class="btn">
+      <i class="fas fa-globe"></i>
+      <span>ES</span>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <div class="logo-image">
+            <img src="assets/images/about/logo.jpg" alt="Lu.Store Logo">
+          </div>
+          <a href="index.html">lu.store</a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="about.html" class="active">Nosotros</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="https://www.instagram.com/lu.s_store?igsh=ZzcyZGs2ZHk0aHF0" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="products.html">Productos</a></li>
+      <li><a href="about.html">Nosotros</a></li>
+      <li class="mobile-social">
+        <a href="https://www.instagram.com/lu.s_store?igsh=ZzcyZGs2ZHk0aHF0" target="_blank">
+          <i class="fab fa-instagram"></i> Síguenos en Instagram
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- About Header -->
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>Sobre Lu.Store</h1>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <main>
+    <div class="about-content">
+      <div class="about-image-full">
+        <img src="assets/images/about/logo.jpg" alt="Equipo de Lu.Store">
+      </div>
+      
+      <div class="about-text text-justify">
+        <h2 class="text-center">Nuestra Historia</h2>
+        <p>Lu.Store nació durante la pandemia como un pequeño emprendimiento en Instagram, impulsado por la pasión por el <span class="nowrap">K-Pop</span> y Anime y el deseo de crear productos únicos para nuestra comunidad. Lo que comenzó como una página de Instagram se ha convertido en una marca reconocida, gracias al apoyo incondicional de nuestros clientes.</p>
+        
+        <h2 class="text-center">Nuestra Misión</h2>
+        <p>En Lu.Store, nos dedicamos a proporcionar mercancía <span class="nowrap">K-Pop</span> y Anime de la más alta calidad, creando un espacio donde los fans pueden expresar su amor por sus artistas favoritos. Nuestro objetivo es más que vender productos; buscamos construir una comunidad vibrante y apoyar la cultura <span class="nowrap">K-Pop</span> y Anime en nuestra región.</p>
+        
+        <ul class="mission-list">
+          <li>Diseños únicos y personalizados que reflejan la esencia del <span class="nowrap">K-Pop</span> y Anime</li>
+          <li>Materiales de primera calidad para garantizar la durabilidad</li>
+          <li>Atención al cliente excepcional y personalizada</li>
+          <li>Envíos seguros y rápidos a todo el país</li>
+        </ul>
+
+        <h2 class="text-center">Conéctate con Nosotros</h2>
+        <p>¡Nos encantaría conocerte! Síguenos en Instagram para estar al día con nuestras últimas novedades, promociones especiales y eventos. No dudes en contactarnos por correo electrónico o DM si tienes alguna pregunta o sugerencia.</p>
+        
+        <div class="connect-buttons">
+          <a href="https://www.instagram.com/lu.s_store?igsh=ZzcyZGs2ZHk0aHF0" class="btn btn-primary" target="_blank">
+            <i class="fab fa-instagram"></i> Síguenos en Instagram
+          </a>
+          <!-- <a href="mailto:contact@lustore.com" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Contáctanos
+          </a> -->
+        </div>
+
+        <div class="thank-you-box text-center">
+          <i class="fas fa-heart"></i>
+          <h2>¡Gracias por tu Apoyo!</h2>
+          <p>Cada compra, cada mensaje y cada interacción nos ayuda a crecer y mejorar. Gracias por ser parte de nuestra historia.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-logo">lu.store</div>
+          <p>Tu destino para calcomanías, posters y tarjetas lomo con temática K-Pop y Anime. Expresa tu amor con nuestra mercancía de alta calidad.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/lu.s_store?igsh=ZzcyZGs2ZHk0aHF0" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="mailto:lustore.kpop@gmail.com"><i class="far fa-envelope"></i></a> -->
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="products.html">Calcomanías</a></li>
+            <li><a href="products.html">Posters</a></li>
+            <li><a href="products.html">Tarjetas Lomo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; <span id="currentYear"></span> lu.store. Todos los derechos reservados.</p>
+          <p class="footer-love">Hecho con <i class="fas fa-heart"></i> para fans del <span class="nowrap">K-Pop</span> y Anime</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

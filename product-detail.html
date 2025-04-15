@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail - Lu.Store</title>
+  <meta name="description" content="View detailed information about our K-pop themed merchandise at Lu.Store.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">lu.store</a>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="https://instagram.com/lu.store" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="mobile-social">
+        <a href="https://instagram.com/lu.store" target="_blank">
+          <i class="fab fa-instagram"></i> Follow on Instagram
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Product Detail -->
+  <section class="product-detail">
+    <div class="container">
+      <a href="products.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Products
+      </a>
+      
+      <div class="product-detail-grid" id="productDetailContainer">
+        <!-- Product detail will be loaded dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Details -->
+  <section class="product-details-section" id="productDetailsSection">
+    <div class="container">
+      <h2>Product Details</h2>
+      <div class="product-details-grid" id="productDetailsGrid">
+        <!-- Product details will be loaded dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="related-products">
+    <div class="container">
+      <h2>You Might Also Like</h2>
+      <div class="products-grid" id="relatedProducts">
+        <!-- Related products will be loaded dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-logo">lu.store</div>
+          <p>Your ultimate destination for K-pop themed stickers, posters, and lomo cards. Express your love for K-pop with our high-quality merchandise.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/lu.store" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:contact@lu.store"><i class="far fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="products.html?category=stickers">Stickers</a></li>
+            <li><a href="products.html?category=posters">Posters</a></li>
+            <li><a href="products.html?category=lomo-cards">Lomo Cards</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> lu.store. All rights reserved.</p>
+        <p class="footer-love">Made with <i class="fas fa-heart"></i> for K-pop fans</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

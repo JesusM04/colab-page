@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Lu.Store</title>
+  <meta name="description" content="Explora nuestra colección de calcomanías, posters y tarjetas lomo con temática K-pop en Lu.Store.">
+  <script>
+    // Detectar el tema preferido antes de que la página se cargue
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+                   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logo1.jpg">
+  <script src="js/translations.js" defer></script>
+</head>
+<body>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button class="btn">
+      <i class="fas fa-globe"></i>
+      <span>ES</span>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <div class="logo-image">
+            <img src="assets/images/about/logo.jpg" alt="Lu.Store Logo">
+          </div>
+          <a href="index.html">lu.store</a>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html" data-translate="nav-home">Inicio</a></li>
+            <li><a href="products.html" class="active" data-translate="nav-products">Productos</a></li>
+            <li><a href="about.html" data-translate="nav-about">Nosotros</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="https://www.instagram.com/lu.s_store/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="products.html">Productos</a></li>
+      <li><a href="about.html">Nosotros</a></li>
+      <li class="mobile-social">
+        <a href="https://instagram.com/lu.store" target="_blank">
+          <i class="fab fa-instagram"></i> Síguenos en Instagram
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Products Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Nuestros Productos</h1>
+      <p>Explora nuestra colección de calcomanías, posters y tarjetas lomo de alta calidad con temática K-pop y Anime. ¡Cada artículo está cuidadosamente diseñado con amor para fans del K-pop como tú!</p>
+    </div>
+  </section>
+
+  <!-- Products Filters -->
+  <section class="products-filters">
+    <div class="container">
+      <div class="filters-container">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Buscar productos...">
+        </div>
+        <div class="filter-selects">
+          <div class="select-wrapper">
+            <select id="groupFilter">
+              <option value="all">Todas las categorías</option>
+              <option value="stickers">Stickers</option>
+              <option value="posters">Posters</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid" id="productsGrid">
+        <!-- Los productos se cargarán dinámicamente vía JavaScript -->
+      </div>
+      <div id="noResults" class="no-results hidden">
+        <h3>No se encontraron productos</h3>
+        <p>Intenta ajustar tu búsqueda o filtros</p>
+        <button id="resetFilters" class="btn btn-outline">Restablecer Filtros</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-logo">lu.store</div>
+          <p>Tu destino para calcomanías, posters y tarjetas lomo con temática <span class="nowrap">K-Pop</span> y Anime. Expresa tu amor con nuestra mercancía de alta calidad.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/lu.s_store?igsh=ZzcyZGs2ZHk0aHF0" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="mailto:lustore.kpop@gmail.com"><i class="far fa-envelope"></i></a> -->
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="products.html?category=stickers">Calcomanías</a></li>
+            <li><a href="products.html?category=posters">Posters</a></li>
+            <li><a href="products.html?category=lomo-cards">Tarjetas Lomo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; <span id="currentYear"></span> lu.store. Todos los derechos reservados.</p>
+          <p class="footer-love">Hecho con <i class="fas fa-heart"></i> para fans del <span class="nowrap">K-Pop</span> y Anime</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <!-- <script src="js/products.js"></script> -->
+  <script src="js/products-final.js"></script>
+  <script>
+    // Usar la versión final de los productos
+    document.addEventListener('DOMContentLoaded', () => {
+      // Desactivar los event listeners del archivo products.js
+      const originalProducts = products;
+      
+      // Cargar los productos desde products-final.js
+      renderProducts(filterProducts('all'));
+
+      // Filtrar por tema (stickers/posters)
+      const themeFilter = document.getElementById('groupFilter');
+      themeFilter.addEventListener('change', (e) => {
+          const selectedTheme = e.target.value;
+          const filteredProducts = filterProducts(selectedTheme);
+          renderProducts(filteredProducts);
+      });
+    });
+  </script>
+  <script src="js/language.js"></script>
+</body>
+</html>
