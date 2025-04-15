@@ -6,9 +6,12 @@
   <title>Sobre Nosotros - Lu.Store</title>
   <meta name="description" content="Conoce sobre Lu.Store, nuestra misión y nuestra conexión con la cultura K-pop y anime.">
   <script>
-    // Forzar tema oscuro y evitar parpadeo
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
+    // Detectar el tema preferido antes de que la página se cargue
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+                   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
   </script>
   <style>
     :root {
