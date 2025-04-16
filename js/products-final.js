@@ -1,12 +1,15 @@
 // Definición de productos
+const precioSticker = 1;
+const precioPoster = 2;
+
 const products = [
     // Stickers (12 productos)
     {
         id: 'sticker-001',
-        name: 'Pack 10 Stickers',
+        name: 'Pack 5 Stickers',
         category: 'stickers',
         theme: 'stickers',
-        price: 3.00,
+        price: precioSticker,
         image: 'assets/images/products/stickers/1.jpg',
         group: 'Nana ♡',
         rating: 5,
@@ -14,10 +17,10 @@ const products = [
     },
     {
         id: 'sticker-002',
-        name: 'Pack 10 Stickers',
+        name: 'Pack 5 Stickers',
         category: 'stickers',
         theme: 'stickers',
-        price: 3.00,
+        price: precioSticker,
         image: 'assets/images/products/stickers/2.jpg',
         group: 'Variados ♡',
         rating: 5,
@@ -25,34 +28,34 @@ const products = [
     },
     {
         id: 'sticker-003',
-        name: 'Pack 10 Stickers',
+        name: 'Pack 5 Stickers',
         category: 'stickers',
         theme: 'stickers',
-        price: 3.00,
+        price: precioSticker,
         image: 'assets/images/products/stickers/3.jpg',
         group: 'Variados ♡',
-        rating: 4,
+        rating: 5,
         isSpecial: true
     },
     {
         id: 'sticker-004',
-        name: 'Pack 10 Stickers',
+        name: 'Pack 5 Stickers',
         category: 'stickers',
         theme: 'stickers',
-        price: 3.00,
+        price: precioSticker,
         image: 'assets/images/products/stickers/4.jpg',
         group: 'Variados ♡',
         rating: 5,
         isSpecial: true
     },
-    
+
     // Posters (12 productos)
     {
         id: 'poster-001',
         name: 'Poster tamaño tipo carta',
         category: 'posters',
         theme: 'posters',
-        price: 2.00,
+        price: precioPoster,
         image: 'assets/images/products/posters/1.jpg',
         group: 'Variados ♡',
         rating: 5,
@@ -63,7 +66,7 @@ const products = [
         name: 'Poster tamaño tipo carta',
         category: 'posters',
         theme: 'posters',
-        price: 2.00,
+        price: precioPoster,
         image: 'assets/images/products/posters/2.jpg',
         group: 'Variados ♡',
         rating: 5,
@@ -74,7 +77,7 @@ const products = [
         name: 'Poster tamaño tipo carta',
         category: 'posters',
         theme: 'posters',
-        price: 2.00,
+        price: precioPoster,
         image: 'assets/images/products/posters/3.jpg',
         group: 'Variados ♡',
         rating: 5,
@@ -85,7 +88,7 @@ const products = [
         name: 'Poster tamaño tipo carta',
         category: 'posters',
         theme: 'posters',
-        price: 2.00,
+        price: precioPoster,
         image: 'assets/images/products/posters/4.jpg',
         group: 'Variados ♡',
         rating: 5,
@@ -96,13 +99,14 @@ const products = [
         name: 'Poster tamaño tipo carta',
         category: 'posters',
         theme: 'posters',
-        price: 2.00,
+        price: precioPoster,
         image: 'assets/images/products/posters/5.jpg',
         group: 'Variados ♡',
         rating: 5,
         isSpecial: true
     }
 ];
+
 
 // Función para filtrar productos
 function filterProducts(theme = 'all') {
